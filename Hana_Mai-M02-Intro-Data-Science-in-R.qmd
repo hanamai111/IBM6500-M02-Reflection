@@ -1,0 +1,216 @@
+---
+title: "M02-Introduction to Data Science in R-Reflection"
+author: "Hana Mai"
+date: today
+date-format: "MMMM D, YYYY"
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    toc-expand: true
+    number-sections: true
+    code-link: true
+    code-fold: true
+    code-tools: true
+    code-overflow: wrap
+    embed-resources: true
+    theme: cosmo
+editor: visual
+execute:
+  freeze: auto
+---
+
+# Essay 1: Reproducible Data Science and Literate Coding
+
+## Prompt
+
+> Summarize new things you learned in this module about reproducible data science and literate coding.
+
+## My Response
+
+In this module, one of the most important things I learned was that reproducible data science is not only about getting the correct result once. It is about organizing data, code, documentation, and the computational workflow so that the same analysis can be understood and reproduced later. I learned that a reproducible project should have a clear folder structure, keep the original raw data unchanged, separate data, code, and results, and include documentation such as a README or codebook. Version control also plays an important role because Git allows changes to be recorded through commits and makes it possible to return to earlier versions of a project.
+
+Another concept that was new to me was literate coding. Instead of keeping code, explanations, and results in separate places, literate coding combines them in the same document. This makes the analysis easier to understand because the reader can see not only the final result, but also the code and reasoning that produced it. Quarto is a good example of this approach because a `.qmd` file can contain narrative text, code, tables, figures, and outputs together.
+
+What I found especially useful from the presentation *An Introduction to Reproducible Research Practices* was the idea that reproducibility also benefits my “future self.” If I return to a project several months later, good organization and documentation can help me understand what data I used, what transformations I performed, and why I made certain analytical decisions. This is especially relevant to marketing analytics, where reports may need to be updated regularly as new campaign or customer data becomes available.
+
+Overall, this module changed the way I think about data analysis. I now see a data science project as more than a collection of scripts and results. A strong workflow should make the entire process transparent, organized, repeatable, and easy to communicate.
+
+::: callout-note
+## Key Takeaway
+
+The biggest lesson I learned is that reproducibility is not only for other researchers or analysts. It also helps my future self understand, update, and reproduce my own work.
+:::
+
+# Essay 2: Quarto
+
+## Prompt
+
+> Summarize the instructor's lecture about Quarto that you found impressive. Do you see yourself using Quarto every day for your job or study, like taking notes in your class or preparing a presentation? More eye-catching effects will be introduced in later modules.
+
+## My Response
+
+Before this module, I mostly thought of Quarto as a tool for combining R code and written explanations in a report. After Dr. Jung’s lecture and Tom Mock’s *Welcome to Quarto Workshop*, I realized that Quarto is much broader than that. Tom Mock described Quarto as an open-source scientific and technical publishing system built on Pandoc, and what impressed me most was its ability to support a complete publishing workflow rather than only producing a single report.
+
+One feature I found especially impressive was single-source publishing. The same `.qmd` source can be used to create HTML, PDF, Word documents, presentations, websites, and other formats. I also liked the Visual Editor because it allows users to work with headings, tables, links, citations, and other formatting in a more visual way while still keeping the document reproducible. Another useful feature is that Quarto is not limited to R. Tom Mock demonstrated that it can work with R, Python, Julia, JavaScript, and Jupyter-based workflows, which makes it useful for collaboration between people who use different programming tools.
+
+I can see myself using Quarto regularly for my studies. Instead of keeping class notes, code, figures, and explanations in separate files, I could organize them in one Quarto document. It would also be useful for assignments and presentations because I could update the source once and render a new version without manually recreating all of the content. Features such as tables of contents, citations, cross-references, callouts, and different output formats could make my academic work easier to organize and more professional.
+
+I also think Quarto could be valuable in my future career in digital marketing and analytics. Marketing reports often combine data, visualizations, explanations, and recommendations, so keeping these components together in a reproducible document would make the reporting process easier to update and review. I may not use Quarto for every small daily task, but I can definitely see myself using it regularly for analytics reports, presentations, documentation, and projects where the analysis needs to be updated or shared with other people.
+
+::: panel-tabset
+## For My Studies
+
+I can use Quarto for class notes, assignments, research summaries, and presentations because narrative, code, figures, and references can stay together in one document.
+
+## For My Career
+
+I can use Quarto for reproducible marketing analytics reports, client-facing presentations, and documentation of data-cleaning and analysis workflows.
+:::
+
+# Essay 3: Reproducibility Crisis
+
+## Prompt
+
+> Summarize the video presentation about reproducibility crisis. What do you think about reproducible crisis in your field? How can Quarto help address the concerns you have about reproducibility in the line of your work?
+
+## My Response
+
+In *An Introduction to Reproducible Research Practices*, it has helped me understand why reproducibility has become an important concern in data-driven work. A result may look convincing, but it can be difficult to reproduce if the original data, code, computational steps, documentation, or software environment are missing. One example that stood out to me was the difficulty of returning to older code after a long period of time. Even the original researcher may struggle to understand what files were used, what transformations were performed, or whether changes in software and package versions affect the results. This showed me that reproducibility is not only about verifying someone else's work, but also about making sure that our own work can still be understood and repeated later.
+
+I think similar reproducibility problems can occur in digital marketing and marketing analytics. Marketing reports often combine data from multiple sources such as web analytics platforms, advertising platforms, spreadsheets, and customer databases.[^1] If an analyst manually copies values, changes filters, cleans data in spreadsheets, or calculates metrics without documenting the process, another person may not be able to reproduce the same report. Even the same analyst could have difficulty explaining why a number changed several months later. This can become especially important when campaign performance, budgets, or strategic decisions are based on those results.
+
+[^1]: Using multiple data sources makes documentation especially important because each platform may have different definitions, filters, and reporting processes.
+
+Quarto can help address these concerns because it keeps the analysis, code, explanations, figures, and results together in the same source document. Instead of manually transferring results into a separate report, the calculations and visualizations can be generated directly from the analytical workflow. This makes it easier to see how a result was created and to rerun the analysis when the underlying data changes.
+
+For my future work in marketing analytics, I think this approach could make recurring reports more transparent and easier to maintain. If assumptions, filters, transformations, and calculations are documented in the same Quarto report, another team member could better understand the workflow and update it when necessary. Quarto would not solve every reproducibility problem by itself, but it could provide a much clearer and more organized record of how an analysis was produced.
+
+| Reproducibility Concern | Example in Marketing Analytics | How Quarto Can Help |
+|----|----|----|
+| Manual processing | Copying campaign results between spreadsheets and reports | Keeps code and results in the same workflow |
+| Missing documentation | Filters or calculations are not recorded | Allows assumptions and analytical steps to be explained beside the code |
+| Changing data | Campaign data is updated over time | Analysis can be rerun using updated data |
+| Inconsistent workflows | Different analysts process the same data differently | Provides a documented and repeatable analytical process |
+
+: Reproducibility concerns in marketing analytics {#tbl-reproducibility}
+
+As summarized in @tbl-reproducibility, reproducibility problems in marketing analytics can come from both technical and human factors, while Quarto can help make the analytical process more transparent and repeatable.
+
+# Essay 4: Tidyverse and R
+
+## Prompt
+
+> Summarize what you learned in this module about the Tidyverse ecosystem in R. What can you do with R?
+
+## My Response
+
+Before this module, I knew that R could be used for data analysis, but I did not realize how much of its functionality comes from an ecosystem of packages. One of the most important ecosystems I learned about is the Tidyverse, which is a collection of R packages designed to work together with a consistent style and syntax. Instead of learning completely different approaches for every data task, the Tidyverse provides tools that follow similar principles, which makes a data analysis workflow easier to read and understand.
+
+Several packages stood out to me because they address different stages of data analysis. `dplyr` is useful for data manipulation through functions such as `filter()`, `select()`, `mutate()`, `arrange()`, and `summarize()`. `tidyr` helps organize data into a tidy structure, where each variable is a column, each observation is a row, and each cell contains one value. I also learned about `ggplot2`, which uses the Grammar of Graphics to build visualizations by combining data, aesthetic mappings, and geometric layers. Other Tidyverse packages, such as `stringr`, `lubridate`, `forcats`, and `purrr`, extend R's ability to work with text, dates, categorical variables, lists, and repeated operations.
+
+What I found most useful is that R can support much more than statistical calculations. It can import and clean data, reshape datasets, create new variables, summarize information, visualize patterns, build statistical and machine-learning models, automate parts of an analysis, and create reports and interactive applications. Because R works with tools such as Quarto, the analysis can also be combined with explanations, tables, figures, and outputs in a reproducible report.
+
+For digital marketing and analytics, I can see many practical uses for R. For example, I could clean campaign data from multiple sources, calculate performance metrics, compare customer or campaign segments, visualize trends, and prepare reports that can be updated when new data becomes available. This makes R valuable not only as a programming language, but also as a complete environment for turning raw data into information that can support marketing decisions.
+
+### A Simple Tidyverse Example
+
+The following example demonstrates how R can summarize data using dplyr and visualize relationships using ggplot2.
+
+```{r}
+#| label: tidyverse-example
+#| warning: false
+#| message: false
+#| code-fold: true
+
+library(dplyr)
+library(ggplot2)
+
+# Summarize average fuel efficiency by number of cylinders
+mtcars |>
+  group_by(cyl) |>
+  summarize(
+    average_mpg = mean(mpg),
+    number_of_cars = n()
+  )
+
+# Visualize the relationship between vehicle weight and fuel efficiency
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  labs(
+    title = "Vehicle Weight and Fuel Efficiency",
+    x = "Vehicle Weight",
+    y = "Miles per Gallon"
+  )
+```
+
+::: callout-tip
+## Tidyverse Workflow
+
+A useful way for me to think about the Tidyverse is as a workflow: import and organize the data, transform it, explore it, visualize it, and then communicate the results.
+:::
+
+# Essay 5: R Packages for My Career
+
+## Prompt
+
+> Refer to the video introducing twenty R packages. Among the various packages introduced, choose two packages beyond the Tidyverse ecosystem, base R, and Quarto that could enhance your job/career. Tell me why you think so.
+
+## My Response
+
+In RichardOnData’s video *20 R Packages You Should Know*, I learned that the R ecosystem extends far beyond the Tidyverse and includes packages for visualization, reporting, interactive applications, machine learning, time series, and even integration with Python. Among the packages introduced, the two that I think could be especially useful for my career in digital marketing and analytics are `plotly` and `shiny`. Both packages could help me move beyond simply analyzing data and make the results more interactive and useful for other people.
+
+The first package I would like to learn more about is `plotly`. In the video, Richard demonstrated how `plotly` can create interactive visualizations where users can hover over individual points, inspect values, and zoom into particular areas of a chart. I think this would be valuable in marketing analytics because stakeholders often want to explore campaign performance rather than only look at a static chart. For example, an interactive chart could allow a marketing manager to examine changes in conversions, engagement, advertising spend, or customer behavior across different campaigns or time periods.
+
+The second package I would choose is `shiny`. Richard explained that `shiny` allows R users to build interactive web applications using a user interface and server logic. This stood out to me because it could turn an analysis into a tool that other people can use without needing to know R. In a marketing setting, I could imagine building a dashboard where a client or team member selects a campaign, date range, or customer segment and immediately sees updated metrics and visualizations.
+
+I think these two packages complement each other well. `plotly` could help me communicate data through more interactive visualizations, while `shiny` could provide an interface where those visualizations and other analytical results can be explored. Developing these skills could help me become more effective at not only performing marketing analysis, but also presenting results in a way that is accessible and useful for decision-makers.
+
+### How These Packages Could Support My Career
+
+| Package | Main Capability | Potential Marketing Analytics Use |
+|----|----|----|
+| `plotly` | Interactive data visualizations | Explore campaign performance, customer behavior, and trends through hover and zoom |
+| `shiny` | Interactive web applications | Build dashboards where stakeholders can filter data and explore marketing results |
+
+: How `plotly` and `shiny` could support my career {#tbl-career-packages}
+
+As shown in @tbl-career-packages, the two packages would support different but complementary parts of a marketing analytics workflow: `plotly` focuses on interactive visualization, while `shiny` can turn an analysis into an interactive application.
+
+My main reasons for choosing these packages are:
+
+1.  They make analytical results easier for non-technical stakeholders to explore.
+2.  They could help turn marketing data into practical tools for communication and decision-making.
+
+# Essay 6: R vs. Python
+
+## Prompt
+
+> Refer to the debate on R vs. Python. What is your take on this debate? In your response, consider how Quarto enables people using R and Python in the same team to still collaborate.
+
+## My Response
+
+The R versus Python debate helped me realize that choosing a programming language should depend more on the task than on trying to decide which language is universally better. Both R and Python are powerful tools for data science, but they have different strengths. For that reason, I do not think the debate needs to have one clear winner. Instead, I think the more practical approach is to understand what each language does well and use the appropriate tool when needed.
+
+From what I have learned so far, R is especially strong for statistical analysis, data visualization, and reproducible reporting. Packages such as `dplyr` and `ggplot2`, together with Quarto, make it convenient to move from raw data to analysis and then communicate the results in the same workflow. This is particularly relevant to my field of digital marketing and analytics because much of the work involves cleaning campaign data, calculating performance metrics, visualizing trends, and explaining the findings to other people.
+
+At the same time, I see Python as an important skill because it is widely used for general-purpose programming, automation, machine learning, APIs, and larger technical workflows. I may currently use R more directly in my coursework and analytics work, but I would like to develop stronger Python skills in the future. I see the two languages as complementary rather than competing. This idea was also reinforced in the earlier package video, where `reticulate` was introduced as a way to work with Python from R and move between objects from the two languages.
+
+What I found especially interesting is that Quarto reduces the need for everyone on a team to use the same programming language or even the same editor. In the Quarto presentations, the speakers showed that Quarto can work with R through Knitr and with Python or Julia through Jupyter, while using a shared document structure and publishing system. This means one team member could work mainly in R while another works in Python, but both could still contribute to the same reproducible project or publication.
+
+For my own career, I would prefer to build a strong foundation in R first because it directly supports the type of analytics and reporting I am currently learning. However, I do not want to limit myself to only one language. Learning Python as well would expand the types of projects I can work on, while tools such as Quarto make it possible to combine strengths from both ecosystems. My takeaway from the debate is therefore not “R or Python,” but rather learning how to use the right tool for the right problem and how to make those tools work together.
+
+::: callout-important
+## My Take
+
+I do not think the most useful question is whether R or Python is better. What matters more is choosing the right tool for the task and being able to collaborate across tools when a project requires it.
+:::
+
+### How I See the Two Languages
+
+| R | Python |
+|----|----|
+| Statistical analysis | General-purpose programming |
+| Data visualization | Automation |
+| Reproducible reporting | APIs and broader software workflows |
+| Strong fit for my current analytics coursework | Skill I want to develop for future technical projects |
